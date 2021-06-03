@@ -1,0 +1,158 @@
+# Translation of verbiste to German.
+# Copyright (C) 2003-2010 Pierre Sarrazin <http://sarrazip.com/>
+# This file is distributed under the same license as the verbiste package.
+# Chris Leick <c.leick@vollbio.de>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: verbiste 0.1.26-1\n"
+"Report-Msgid-Bugs-To: Pierre Sarrazin <http://sarrazip.com/>\n"
+"POT-Creation-Date: 2019-02-03 19:37-0500\n"
+"PO-Revision-Date: 2015-09-21 23:03+0100\n"
+"Last-Translator: Paul Seyfert <pseyfert@mathphys.fsk.uni-heidelberg.de>\n"
+"Language-Team: German <debian-l10n-german@lists.debian.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+
+#: src/gui/conjugation.cpp:106
+msgid "inf. pres."
+msgstr "Infinitiv Präsens"
+
+#: src/gui/conjugation.cpp:110
+msgid "ind. pres."
+msgstr "Indikativ Präsens"
+
+#: src/gui/conjugation.cpp:111
+msgid "ind. imperf."
+msgstr "Indikativ Imperfekt"
+
+#: src/gui/conjugation.cpp:112
+msgid "ind. fut."
+msgstr "Indikativ Futur"
+
+#: src/gui/conjugation.cpp:113
+msgid "ind. past"
+msgstr "Indikativ Präteritum"
+
+#: src/gui/conjugation.cpp:114
+msgid "cond. pres."
+msgstr "Konditional Präsens"
+
+#: src/gui/conjugation.cpp:115
+msgid "subj. pres."
+msgstr "Subjunktiv Präsens"
+
+#: src/gui/conjugation.cpp:116
+msgid "subj. imperf."
+msgstr "Subjunktiv Imperfekt"
+
+#: src/gui/conjugation.cpp:118
+msgid "imp. pres."
+msgstr "Imperativ Präsens"
+
+#: src/gui/conjugation.cpp:119
+msgid "part. pres."
+msgstr "Partizip Präsens"
+
+#: src/gui/conjugation.cpp:120
+msgid "part. past"
+msgstr "Partizip Präteritum"
+
+#: src/gui/conjugation.cpp:121
+msgid "gerund pres."
+msgstr "Gérondif Präsens"
+
+#: src/gtk/main-window.cpp:199
+msgid "Model:"
+msgstr ""
+
+#: src/gtk/main-window.cpp:218
+msgid "Look up on Wikizionario"
+msgstr "Auf Wikizionario nachschlagen"
+
+#: src/gtk/main-window.cpp:219
+msgid "Look up on Wiktionnaire"
+msgstr "Auf Wiktionnaire nachschlagen"
+
+#: src/gtk/main-window.cpp:333
+msgid "Distributed under the GNU General Public License"
+msgstr "Verbreitet unter der »GNU General Public License«"
+
+#: src/gtk/main-window.cpp:340
+msgid "A French conjugation system"
+msgstr "Ein Französisch-Konjugationssystem"
+
+#: src/gtk/main-window.cpp:802
+msgid "Save Conjugation to File"
+msgstr "Konjugation in eine Datei speichern"
+
+#: src/gtk/main-window.cpp:817
+msgid "HTML"
+msgstr "HTML"
+
+#: src/gtk/main-window.cpp:818
+msgid "LaTeX"
+msgstr "LaTeX"
+
+#: src/gtk/main-window.cpp:831
+msgid "_Format of the saved file:"
+msgstr "_Format der gespeicherten Datei:"
+
+#: src/gtk/main-window.cpp:889
+msgid "Could not create file:"
+msgstr "Datei konnte nicht erstellt werden:"
+
+#: src/gtk/main-window.cpp:915
+msgid "Could not close file:"
+msgstr "Datei konnte nicht geschlossen werden:"
+
+#: src/gtk/main-window.cpp:1080
+msgid "_Verb:"
+msgstr "_Verb"
+
+#: src/gtk/main-window.cpp:1087
+msgid "Conjuga_te"
+msgstr "_Konjugieren"
+
+#: src/gtk/main-window.cpp:1105
+msgid "Show _Pronouns"
+msgstr "_Pronomen anzeigen"
+
+#: src/gtk/main-window.cpp:1141
+msgid "Search Fr_ench"
+msgstr "Fran_zösisch"
+
+#: src/gtk/main-window.cpp:1149
+msgid "Search _Italian"
+msgstr "I_talienisch"
+
+#: src/gtk/main-window.cpp:1170 src/gnome/gnome-app.cpp:81
+msgid "_Spelling: tolerant"
+msgstr "_Orthographie: Tolerant"
+
+#: src/gtk/main-window.cpp:1196
+msgid "strict"
+msgstr "Strikt"
+
+#: src/gtk/main-window.cpp:1611
+msgid "error"
+msgstr "Fehler"
+
+#: src/gtk/main-window.cpp:1612
+msgid "Unknown verb."
+msgstr "Unbekanntes Verb"
+
+#: src/gnome/panel-applet.cpp:123
+msgid "Verb:"
+msgstr "Verb:"
+
+#: src/gnome/panel-applet.cpp:145
+msgid "_About..."
+msgstr "_Über …"
+
+#: src/gnome/panel-applet.cpp:152
+msgid "_Empty Text Field"
+msgstr "_Leeres Textfeld"
