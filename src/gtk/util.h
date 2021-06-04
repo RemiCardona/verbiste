@@ -1,7 +1,7 @@
 #ifndef _H_util
 #define _H_util
 
-#include <gtk/gtkwidget.h>
+#include <gtk/gtk.h>
 #include "gui/conjugation.h"
 #include <string>
 

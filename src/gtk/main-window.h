@@ -23,11 +23,10 @@
 #ifndef _H_main_window
 #define _H_main_window
 
-#include <gtk/gtkentry.h>
-#include <gdk/gdkkeysyms.h>
-
 #include <string>
 #include <stdexcept>
+
+#include <glib.h>
 
 
 extern gboolean hideOnDelete;
