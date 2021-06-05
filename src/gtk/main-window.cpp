@@ -287,7 +287,7 @@ onKeyPressInResultWin(GtkWidget *, GdkEventKey *event, gpointer)
 {
     g_return_val_if_fail(event != NULL, TRUE);
 
-    if (event->keyval == GDK_w && (event->state & GDK_CONTROL_MASK) != 0)
+    if (event->keyval == GDK_KEY_w && (event->state & GDK_CONTROL_MASK) != 0)
     {
         hideOrQuit(NULL, NULL);
         return TRUE;
@@ -305,7 +305,7 @@ onKeyPressInAbout(GtkWidget *about, GdkEventKey *event, gpointer)
 
     switch (event->keyval)
     {
-        case GDK_Escape:
+        case GDK_KEY_Escape:
             gtk_dialog_response(GTK_DIALOG(about), GTK_RESPONSE_OK);
             return TRUE;
 
@@ -373,8 +373,8 @@ onKeyPressInEntry(GtkWidget *entry, GdkEventKey *event, gpointer /*data*/)
 
     switch (event->keyval)
     {
-        case GDK_Return:
-        case GDK_KP_Enter:
+        case GDK_KEY_Return:
+        case GDK_KEY_KP_Enter:
             {
                 const gchar *text = gtk_entry_get_text(GTK_ENTRY(entry));
                 processText(text);
