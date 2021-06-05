@@ -1299,20 +1299,28 @@ class WaitCursor
 public:
     WaitCursor()
     {
-        if (resultWin == NULL || resultWin->window == NULL)
+        if (resultWin == NULL)
+            return;
+
+        GdkWindow *window = gtk_widget_get_window(resultWin);
+        if (window == NULL)
             return;
 
         GdkCursor *cursor = gdk_cursor_new(GDK_WATCH);
-        gdk_window_set_cursor(resultWin->window, cursor);
+        gdk_window_set_cursor(window, cursor);
         gdk_cursor_unref(cursor);
     }
 
     ~WaitCursor()
     {
-        if (resultWin == NULL || resultWin->window == NULL)
+        if (resultWin == NULL)
             return;
 
-        gdk_window_set_cursor(resultWin->window, NULL);
+        GdkWindow *window = gtk_widget_get_window(resultWin);
+        if (window == NULL)
+            return;
+
+        gdk_window_set_cursor(window, NULL);
     }
 };
 
