@@ -333,7 +333,7 @@ showAbout()
         + _("Distributed under the GNU General Public License");
 
     GtkWidget *about = gtk_about_dialog_new();
-    gtk_about_dialog_set_name(GTK_ABOUT_DIALOG(about), PACKAGE_FULL_NAME);
+    gtk_about_dialog_set_program_name(GTK_ABOUT_DIALOG(about), PACKAGE_FULL_NAME);
     gtk_about_dialog_set_version(GTK_ABOUT_DIALOG(about), VERSION);
     gtk_about_dialog_set_copyright(GTK_ABOUT_DIALOG(about), copyright.c_str());
     gtk_about_dialog_set_comments(GTK_ABOUT_DIALOG(about),
@@ -812,10 +812,10 @@ onSaveAsButton(GtkWidget *, gpointer)
 
     // Add a pull-down menu that offers to choose the file format.
 
-    GtkWidget *comboBox = gtk_combo_box_new_text();
+    GtkWidget *comboBox = gtk_combo_box_text_new();
     // These appends must be in same order as enum SaveFileFormat:
-    gtk_combo_box_append_text(GTK_COMBO_BOX(comboBox), _("HTML"));
-    gtk_combo_box_append_text(GTK_COMBO_BOX(comboBox), _("LaTeX"));
+    gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(comboBox), _("HTML"));
+    gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(comboBox), _("LaTeX"));
 
     // Get the default format from the saved configuration.
     Catena saveFormat(get_config_string("Files/SaveFormat"));
@@ -1072,7 +1072,8 @@ showResultWin()
         /*
             Create a text field where the user can enter requests:
         */
-        verbEntry = gtk_entry_new_with_max_length(255);
+        verbEntry = gtk_entry_new();
+        gtk_entry_set_max_length(GTK_ENTRY(verbEntry), 255);
         g_signal_connect(G_OBJECT(verbEntry), "key-press-event",
                         G_CALLBACK(onKeyPressInEntry), NULL);
         g_signal_connect(G_OBJECT(verbEntry), "changed",
@@ -1170,7 +1171,8 @@ showResultWin()
         GtkWidget *diceBeforeLabel = gtk_label_new_with_mnemonic(_("_Spelling: tolerant"));
 
         diceScale = gtk_hscale_new_with_range(DICE_SCALE_MIN, DICE_SCALE_MAX, 0.01);
-        gtk_range_set_update_policy(GTK_RANGE(diceScale), GTK_UPDATE_DISCONTINUOUS);
+        // FIXME there's no simple replacement for UPDATE_DISCONTINUOUS
+        //gtk_range_set_update_policy(GTK_RANGE(diceScale), GTK_UPDATE_DISCONTINUOUS);
         gtk_scale_set_draw_value(GTK_SCALE(diceScale), FALSE);  // don't show number
         gtk_scale_set_digits(GTK_SCALE(diceScale), 2);
 
