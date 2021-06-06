@@ -113,7 +113,8 @@ newLabel(const string &markup, gboolean selectable, gfloat yalign = 0.0)
 {
     GtkWidget *label = gtk_label_new("");
     gtk_label_set_markup(GTK_LABEL(label), markup.c_str());
-    gtk_misc_set_alignment(GTK_MISC(label), 0.0, yalign);
+    gtk_label_set_xalign(GTK_LABEL(label), 0.0);
+    gtk_label_set_yalign(GTK_LABEL(label), yalign);
     gtk_label_set_selectable(GTK_LABEL(label), selectable);
     return label;
 }
