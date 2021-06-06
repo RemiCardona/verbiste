@@ -1124,7 +1124,7 @@ showResultWin()
         g_signal_connect(G_OBJECT(showPronounsCB), "toggled",
                                     G_CALLBACK(onShowPronounsToggled), NULL);
 
-        gtk_box_pack_start(GTK_BOX(optionsBox), gtk_vseparator_new(), FALSE, FALSE, 0);
+        gtk_box_pack_start(GTK_BOX(optionsBox), gtk_separator_new(GTK_ORIENTATION_VERTICAL), FALSE, FALSE, 0);
 
         // Provide buttons that add accented characters to the Verb text field.
         // The \x codes are in UTF-8.
@@ -1144,7 +1144,7 @@ showResultWin()
         addAccentedCharButton(optionsBox, "\xc3\xb9"); // in HTML: &ugrave;
         addAccentedCharButton(optionsBox, "\xc3\xbb"); // in HTML: &ucirc;
 
-        gtk_box_pack_start(GTK_BOX(optionsBox), gtk_vseparator_new(), FALSE, FALSE, 0);
+        gtk_box_pack_start(GTK_BOX(optionsBox), gtk_separator_new(GTK_ORIENTATION_VERTICAL), FALSE, FALSE, 0);
 
         useFrenchDictCB = gtk_check_button_new_with_mnemonic(_("Search Fr_ench"));
                                         // 'F' is already shortcut for "Fermer" button in French interface
@@ -1211,7 +1211,7 @@ showResultWin()
         gtk_box_pack_start(GTK_BOX(bottomBox), diceScale, TRUE, TRUE, 0);
         gtk_box_pack_start(GTK_BOX(bottomBox), diceAfterLabel, FALSE, FALSE, 0);
 
-        gtk_box_pack_start(GTK_BOX(bottomBox), gtk_vseparator_new(), FALSE, FALSE, 0);
+        gtk_box_pack_start(GTK_BOX(bottomBox), gtk_separator_new(GTK_ORIENTATION_VERTICAL), FALSE, FALSE, 0);
 
         GtkWidget *closeButton = gtk_button_new_from_stock(GTK_STOCK_CLOSE);
         gtk_box_pack_end(GTK_BOX(bottomBox), closeButton, FALSE, FALSE, 0);
