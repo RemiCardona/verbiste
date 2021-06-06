@@ -833,7 +833,8 @@ onSaveAsButton(GtkWidget *, gpointer)
     gtk_label_set_mnemonic_widget(GTK_LABEL(prompt), comboBox);
 
     // Add the combo box and its prompt to the file chooser dialog.
-    GtkWidget *formatBox = gtk_hbox_new(FALSE, SP);
+    GtkWidget *formatBox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, SP);
+    gtk_box_set_homogeneous(GTK_BOX(formatBox), FALSE);
     gtk_box_pack_start(GTK_BOX(formatBox), prompt, FALSE, FALSE, 0);
     gtk_box_pack_start(GTK_BOX(formatBox), comboBox, TRUE, TRUE, 0);
 
@@ -1082,7 +1083,9 @@ showResultWin()
         GtkWidget *prompt = gtk_label_new_with_mnemonic(_("_Verb:"));
         gtk_label_set_mnemonic_widget(GTK_LABEL(prompt), verbEntry);
 
-        GtkWidget *promptBox = gtk_hbox_new(FALSE, SP);
+        GtkWidget *promptBox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, SP);
+        gtk_box_set_homogeneous(GTK_BOX(promptBox), FALSE);
+
         gtk_box_pack_start(GTK_BOX(promptBox), prompt, FALSE, FALSE, 0);
         gtk_box_pack_start(GTK_BOX(promptBox), verbEntry, TRUE, TRUE, 0);
 
@@ -1102,7 +1105,8 @@ showResultWin()
         /*
             Create an options box.
         */
-        GtkWidget *optionsBox = gtk_hbox_new(FALSE, SP);
+        GtkWidget *optionsBox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, SP);
+        gtk_box_set_homogeneous(GTK_BOX(optionsBox), FALSE);
         showPronounsCB = gtk_check_button_new_with_mnemonic(
                                                         _("Show _Pronouns"));
         gtk_box_pack_start(GTK_BOX(optionsBox), showPronounsCB,
@@ -1167,7 +1171,8 @@ showResultWin()
         /*
             Create a button box at the bottom.
         */
-        GtkWidget *bottomBox = gtk_hbox_new(FALSE, SP);
+        GtkWidget *bottomBox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, SP);
+        gtk_box_set_homogeneous(GTK_BOX(bottomBox), FALSE);
 
         GtkWidget *diceBeforeLabel = gtk_label_new_with_mnemonic(_("_Spelling: tolerant"));
 
