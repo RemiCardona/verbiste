@@ -153,9 +153,11 @@ public:
 
 
 ResultPage::ResultPage()
-  : notebookPage(gtk_vbox_new(FALSE, SP)),
-    table(gtk_table_new(4, 4, FALSE))
+  : table(gtk_table_new(4, 4, FALSE))
 {
+    notebookPage = gtk_box_new(GTK_ORIENTATION_VERTICAL, SP);
+    gtk_box_set_homogeneous(GTK_BOX(notebookPage), FALSE);
+
     GtkWidget *scrolledWin = gtk_scrolled_window_new(NULL, NULL);
     gtk_scrolled_window_set_policy(
                         GTK_SCROLLED_WINDOW(scrolledWin),
@@ -574,7 +576,7 @@ void writeConjugation(ConjugationWriter &writer)
             GtkWidget *widget = (GtkWidget *) p->data;
             g_return_if_fail(widget != NULL);
             
-            if (GTK_IS_VBOX(widget))
+            if (GTK_IS_BOX(widget))
             {
                 GList *vboxChildren = gtk_container_get_children(
                                                     GTK_CONTAINER(widget));
@@ -1226,7 +1228,8 @@ showResultWin()
         /*
             Finish the window setup:
         */
-        GtkWidget *vbox = gtk_vbox_new(FALSE, SP);
+        GtkWidget *vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, SP);
+        gtk_box_set_homogeneous(GTK_BOX(vbox), FALSE);
         gtk_box_pack_start(GTK_BOX(vbox), promptBox, FALSE, FALSE, 0);
         gtk_box_pack_start(GTK_BOX(vbox), optionsBox, FALSE, FALSE, 0);
         gtk_box_pack_start(GTK_BOX(vbox), resultNotebook, TRUE, TRUE, 0);
@@ -1281,7 +1284,9 @@ createTableCell(const VVS &utf8Tense,
                 const string &utf8UserText,
                 FrenchVerbDictionary *fvd)
 {
-    GtkWidget *vbox = gtk_vbox_new(FALSE, SP);
+    GtkWidget *vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, SP);
+    gtk_box_set_homogeneous(GTK_BOX(vbox), FALSE);
+
     GtkWidget *nameLabel = newLabel("<b><u>" + utf8TenseName + "</u></b>", TRUE);
 
     string utf8Persons = createTableCellText(
